@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13 Apr, 2019, 1:24:00 PM
+    Author     : suvo
+*/
+body{
+    margin :0;
+    padding:0;
+    font-family:Helvetica;
+}
+title{
+    text-transform: capitalize;
+}
+a{
+    text-decoration: none;
+}
+.table-container{
+    margin:1em;
+}
+.info-container{
+    position:relative;
+    margin : 1em;
+    border : 2px solid rgba(15, 177, 219,0.2);
+    padding:1em;
+    border-radius: 0.5em;
+}
+.info-container::after{
+    content:"Exam information";
+    position:absolute;
+    top:-1em;
+    left:3em;
+    background:#ffffff;
+    color:#005d82;
+    font-size:1.2em;
+    padding: 0.3em;
+}
+input{
+    padding:0.5em 0.8em;
+    width:50px;
+    border-radius: 3px;
+    background: #ffffff;
+    border:2px solid #161c1e;
+    color:#000000;
+}
+label{
+    color:#005d82;
+}
+label::after{
+
+}
+label+input{
+    margin: 1em .5em;
+}
+td{
+    text-align:center;
+}
+td:first-child{
+    text-align: left;
+    width:100%;
+    max-width:300px;
+    overflow-x:auto;
+}
+input[type="submit"],.button-link{
+    border:2px solid #42c5f4;
+    font-weight: bold;
+    font-size : 1em;
+    color: #42c5f4;
+    width:200px;
+}
+.btn{
+    margin:1em;
+    display:grid;
+}
+.table-container a{
+    border:none;
+}
+.button-link{
+
+    text-transform: uppercase;
+    padding:.3em;
+    margin:auto;
+    width:auto;
+    border-radius: 3px;
+}
+input[type="submit"]:hover,.button-link:hover{
+    
+    color:#005d82;
+    border-color:#005d82;
+    cursor: pointer;
+}
+.msginfo{
+    width:100%;
+    text-align:center;
+}

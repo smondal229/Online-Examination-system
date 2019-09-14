@@ -1,0 +1,107 @@
+body{
+    
+    margin:0;
+    padding:0;
+}
+header h1{
+    text-align: center;
+    font-family:Arial;
+    margin:0;
+    padding:0.3em 1em;
+    color: #0f87aa;
+}
+.container{
+  display:flex;
+  justify-content:space-around;
+  perspective : 1000px;
+}
+.card{
+    width:400px;
+    height:500px;
+    box-shadow:0 0 .3em #0f87aaa6;
+    border-radius:0.5em;
+    transition: all 1s ease;
+    transform-style : preserve-3d;
+}
+.login{
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.login,.register{
+  width:350px;
+  height:400px;
+  padding-bottom:2em;
+  position:absolute;
+  backface-visibility:hidden;
+}
+.register{
+  top:50%;
+  right:50%;
+  transform:translate(50%,-50%)rotateY(180deg);
+}
+input{
+  border:0px;
+  border-bottom:1px solid black;
+  width:100%;
+  padding: 0.1em;
+  font-size:1.2em;
+  height:0px;
+  background-color:transparent;
+  transition: height .3s ease;
+}
+label{
+  position:relative;
+  font-size:1.2em;
+  opacity:0.5;
+  font-family: Arial;
+  z-index:1;
+  transition:all .5s ease;
+}
+.login>form>div{         /*sets padding between inputs of login*/
+  padding: .8em;
+  font-family: 'Sarabun', sans-serif;
+}
+.register>form>div{         /*sets padding between inputs of reg*/
+  padding: 0.5em;
+  font-family: 'Sarabun', sans-serif;
+}
+.buttons{
+  display : flex;
+}
+button{
+  border : 2px solid #0f87aa;
+  padding:.5em;
+  margin:0 auto;
+  width :10em;
+  font-weight:600;
+  border-radius: 2em;
+  color:#0f87aa;
+  background-color : #ffffff; 
+  font-family: 'Cabin', sans-serif;
+  transition:all .3s ease-in;
+}
+button:hover{
+  background-color:#0f87aa;
+  color:white;
+}
+.buttons span{
+    color:#0f87aa;
+    font-weight: bold;
+}
+input:focus{
+  height:100%;
+  outline: none;
+  border-bottom: 1px solid #0f87aa;
+}
+span[class^="error"]{
+    display:flex;
+    justify-content:space-around;
+    color:red;
+    font-size: .8em;
+}
+@media only screen and (max-width:576px){
+    .card{
+        box-shadow: none;
+    }
+}

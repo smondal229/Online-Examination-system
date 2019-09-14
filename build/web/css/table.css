@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 4 Apr, 2019, 1:07:15 AM
+    Author     : suvo
+*/
+
+table{
+    font-family: sans-serif;
+    font-size:1em;
+    color:#005d82;
+    padding:0px;
+    border-bottom:2px solid #d8f4ff;
+    border-top:2px solid #d8f4ff;
+    margin:auto;
+}
+caption{
+    text-transform:capitalize;
+    font-size:1.2em;
+    letter-spacing: 2px;
+    margin: 1em;
+}
+td,th{
+    padding:0.5em 1em;
+    cursor:pointer;
+}
+tr{
+    transition: all 0.3s;
+}
+tr:nth-child(even){
+    background-color: #d8f4ff;
+}
+tr:nth-child(2n+3){
+    background-color:#eafaff;
+}
+tr:not(:first-child):hover{
+    background-color: #a3e5ff;
+}
+.table-heading{
+    background:#ffffff !important;
+    
+}

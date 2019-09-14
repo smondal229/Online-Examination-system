@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13 Apr, 2019, 4:14:30 PM
+    Author     : suvo
+*/
+body{
+    margin:0;
+    padding:0;
+    font-family: Helvetica;
+    color:#005d82;
+}
+.header{
+    position:absolute;
+    top : -1rem;
+    left:3em;
+    background: #ffffff;
+    padding:0 0.5rem;
+}
+.form-group{
+    margin:1em;
+    margin-bottom:3em;
+    border : 2px solid rgba(15, 177, 219,0.2);
+    padding:1em;
+    width:calc(100%-4em);
+    border-radius: 0.5rem;
+}
+.form-group div
+{
+    margin:0.8rem 0;
+    display:block;
+}
+button,textarea,input{
+    background:#ffffff;
+    border: 2px solid #005d82;
+    padding:0.3rem 0.8rem;
+    color:#005d82;
+    border-radius: 3px;
+}
+
+label{
+    font-weight: 400;
+    margin:0.5rem;
+    font-weight: bold;
+}
+textarea::before{
+    content: '\A';
+}
+textarea{
+    font-size:0.8rem;
+    height:auto;
+    margin-top:1rem;
+    width:95%;
+}
+textarea:focus{
+    background:#fff5dd;
+}
+#writecode::before{
+    content:"To insert code first click ";
+}
+#preserved::before{
+    content:"To insert expressions first click ";
+}
+.buttons{
+    transform:translateY(-35%);
+}
+label:hover{
+    cursor:pointer;
+}
+button:hover{
+    background: #005d82;
+    color:#ffffff;
+    cursor:pointer;
+}
+.btn-div{
+    position:relative;
+    background:red;
+}
+.btn-lg{
+    position:absolute;
+    left:50%;
+    font-weight:bold;
+    transform: translateX(-50%);
+    font-size:1em;
+    width:200px;
+}

@@ -1,0 +1,111 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27 Feb, 2019, 12:33:18 AM
+    Author     : suvo
+*/
+body{
+    font-family: Helvetica;
+    margin:0;
+    padding:0;
+}
+.studentinfo{
+    margin:1em;
+    padding:1em;
+    border-radius:0.5em;
+    background:#d8f4ff;
+}
+.incomplete-test{
+    padding:1em;
+    margin:1em;
+    border-radius:0.5em;
+    background:#d8f4ff;
+}
+.incomlete-links{
+    display:block;
+    text-transform: capitalize;
+    margin : 0.5em 0em;
+}
+.studentinfo>p:first-letter{
+    text-transform: uppercase;
+}
+a{
+    text-decoration:none;
+    color:#ff7214;
+}
+a:hover{
+    text-decoration: underline;
+}
+p b,h3{
+    color:#005d82;
+}
+p em{
+    color:#ff7214;
+}
+.link-container{
+    position:relative;
+    margin:1em;
+    display: flex;
+    border-top:2px solid #d8f4ff;
+    flex-wrap:wrap;
+    padding:1em 0;
+}
+.link-container::before{
+    content:'Take a new test';
+    text-transform: uppercase;
+    position:absolute;
+    top:-14px;
+    left:3em;
+    font-family:sans-serif;
+    font-size:1.2rem;
+    color:#005d82;
+    padding : 0 0.5rem;
+    background: #ffffff;
+    font-weight: bold;
+
+}
+.examlink{
+    margin-right:1em;
+    background:#d8f4ff;
+    width: 32%;
+    display: grid;
+    overflow: hidden;
+    height:150px;
+    border-radius:10px;
+    margin-bottom: 1em;
+}
+.examlink a{
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    padding:0.5em;
+    margin: auto;
+    font-weight:800;
+    color:#005d82;
+    text-align: center;
+    word-break: break-word;
+}
+.examlink:hover{
+    transition:all 0.7s ease;
+    background:rgba(0, 93, 130,0.7);
+}
+.examinfo{
+    background: rgba(0,0,0,0.2);
+    padding:1em;
+}
+.examinfo span{
+    display: block;
+    color:white;
+}
+
+.examlink a:hover{
+    transition:all 0.5s ease;
+    text-decoration: none;
+    color:#ffffff;
+}
+.examlink a:hover::after{
+    content:'\a\276f';
+    
+}

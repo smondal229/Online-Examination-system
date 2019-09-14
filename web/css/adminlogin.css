@@ -1,0 +1,130 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14 Apr, 2019, 12:46:50 PM
+    Author     : suvo
+*/
+body{
+    margin:0;
+    padding:0;
+    font-family:Helvetica;
+}
+header{
+    margin:3em;
+    margin-top:0;
+    color:#005d82;
+}
+
+a{
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.student-link,.subject-link{
+    text-transform: capitalize;
+    background:#d8f4ff;
+    margin:1em;
+    width:calc(100% - 4em);
+    height:auto;
+    padding:1em;
+    
+    border-radius:0.2em;
+    margin-bottom: 1em;
+}
+.student-link a,.subject-link a{
+    font-size: 1.6rem;
+    padding:0.5rem;
+    font-weight:800;
+    color:#005d82;
+    text-align: center;
+    
+}
+.subjects{
+    position:relative;
+    margin:1em;
+    margin-top:3em;
+    display: flex;
+    border:2px solid #d8f4ff;
+    flex-wrap:wrap;
+    padding:1em 0;
+    justify-content: space-between;
+}
+.subjects::after{
+    content:'View questions';
+    text-transform: uppercase;
+    position:absolute;
+    top:-14px;
+    left:3em;
+    font-family:sans-serif;
+    font-size:1.2rem;
+    color:rgba(0, 93, 130,0.7);
+    padding : 0 0.5rem;
+    background: #ffffff;
+    font-weight: bold;
+}
+.subject-link:hover,.student-link:hover{
+    transition:all 0.3s ease;
+    outline:4px solid rgba(0, 93, 130,0.7);
+    outline-offset: 4px;
+    background:rgba(0, 93, 130,0.7);
+}
+.subject-link a:hover,.student-link a:hover{
+    transition:all 0.5s ease;
+    text-decoration: none;
+    color:#ffffff;
+}
+.subject-link a:hover::after,.student-link a:hover::after{
+    content:'\a\276f';
+}
+
+.add-new::after{
+    content:"+" !important;
+    position:absolute;
+    transform:translate(50%,-25%);
+    font-size:2.5rem;
+}
+.remove-new::after{
+    content:"\00D7" !important;
+    position:absolute;
+    transform:translate(50%,-25%);
+    font-size:2.5rem;
+}
+#new-table{
+    border: 1px solid #404b4f;
+    padding:0.5em;
+    border-radius: 5px;
+    background:#d8f4ff;
+    margin: 1rem;
+    color:#005d82;
+}
+#new-table:focus{
+    background:#fff5dd;
+}
+#add-test{
+    border: 1px solid #005d82;
+    padding:0.3em 1rem;
+    border-radius: 5px;
+    background:#d8f4ff;
+    color:#005d82;
+    margin: 0.3rem 1rem;
+    font-weight:bold;
+}
+#errormsg{
+    color:#EEE;
+    text-shadow: 0 0 0.5em #005d82;
+    margin:0 3rem;
+}
+#add-test:hover{
+    background: #ffffff;
+    cursor: pointer;
+}
+@keyframes animate{
+    from{
+        background : #70ffa3;
+    }
+    to{
+        background : #d8f4ff;
+    }
+}

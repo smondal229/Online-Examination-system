@@ -1,0 +1,111 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21 Mar, 2019, 7:02:13 PM
+    Author     : suvo
+*/
+header h2{
+    font-family: Arial;
+    text-transform: capitalize;
+    margin:0.5em;
+    color: #005d82;
+}
+.container{
+    margin-top:3%;
+    display:grid;
+    grid-template-columns:1fr minmax(200px,600px) 1fr;
+}
+.container>div{
+    margin:auto;
+    margin-top:1em;
+}
+.timer{
+    grid-column-start:3;
+    height:150px;
+    width:150px;
+    background: #48d0ff;
+    border-radius:50%;
+    display:grid;
+    animation: animate 1s linear infinite;
+}
+.time{
+    margin:auto;
+    font-family:sans-serif;
+    font-size:1.8em;
+}
+@keyframes animate{
+    0%{
+        box-shadow:0 0 0 #0fd0ff;
+    }
+    100%{
+        box-shadow:0 0 5em #0fd0ff;
+    }
+}
+@keyframes animate2{
+    0%{
+        text-shadow:0 0 0 #ff530f;
+        box-shadow:0 0 0 #ff530f;
+    }
+    100%{
+        text-shadow:0 0 5em #ff530f;
+        box-shadow:0 0 5em #ff530f;
+    }
+}
+.buttons{
+    grid-column-start:2;
+}
+.btn{
+    background:#02b0e5;
+    padding:0.3em 1em;
+    border-radius:0.3em;
+    border:2px solid #02b0e5;
+    color: white;
+    font-size: 1em;
+    transition: all 0.3s;
+}
+.btn:hover{
+    box-shadow:0 0 0.5em #02b0e5;
+    text-shadow:0 0 1em #ffffff
+}
+dialog{
+    font-family:Arial;
+    color:#02b0e5;
+    font-weight:bold;
+    border-radius:0.5em;
+    box-shadow:0 0 1em #00bbff;
+    transition:all 0.5s ease-in;
+}
+dialog>div{
+    display:flex;
+    justify-content:space-around;
+}
+
+table{
+    grid-column-start:2;
+    font-family: sans-serif;
+    font-size:1em;
+    color:#005d82;
+    padding:0px;
+    border-bottom:2px solid #d8f4ff;
+    border-top:2px solid #d8f4ff;
+    margin:auto;
+}
+td,th{
+    padding:0.5em 1em;
+    cursor:pointer;
+}
+tr{
+    transition: all 0.3s;
+}
+tr:nth-child(even){
+    background-color: #d8f4ff;
+}
+tr:nth-child(2n+3){
+    background-color:#eafaff;
+}
+tr:not(:first-child):hover{
+    background-color: #a3e5ff;
+}

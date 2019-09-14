@@ -1,0 +1,161 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10 Mar, 2019, 11:18:19 AM
+    Author     : suvo
+*/
+body{
+    margin:0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.container{
+    display:grid;
+    grid-template-columns:minmax(125px,1fr) 3fr 1fr;
+    margin-top:2em;
+}
+
+.header{
+    grid-row-start:1;
+    grid-column-start:1;
+    grid-column-end:3;
+    margin:auto;
+    color:#48d0ff;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+}
+.nav-menu{
+    grid-row-start:2;
+    margin:0.5em;
+}
+.nav-menu>.title{
+    background:#48d0ff;
+    display:grid;
+    border-radius:.2em;
+    padding:0.5em 0;
+    margin-bottom:0.2em;
+}
+.title>.heading{
+    margin:auto;
+    width:100%;
+    text-align: center;
+    font-size: 1em;
+    color:white;
+}
+.navigator{
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    border: 2px solid #48d0ff;
+    border-top:none;
+    border-radius:0.3em;
+}
+.navigator a{
+    text-decoration: none;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color:#48d0ff;
+    border:2px solid #48d0ff;
+    width:20px;
+    border-radius:12px;
+    display:flex;
+    justify-content:space-around;
+    margin:0.3em;
+    transition:all 0.1s ease;
+}
+.navigator a:hover{
+    color:white;
+    background:#48d0ff;
+    border-color : #48d0ff !important;
+    transform: scale(1.2);
+}
+.active{
+    background:#48d0ff;
+    color:white !important;
+    font-weight:bold;
+}
+.answered{
+    background : #ff8935;
+    border-color: #ff8935 !important;
+    color:white !important;
+}
+.questionarea{
+    grid-row-start:2;
+    padding:1em;
+    margin:auto;
+    color:#005d82;
+}
+label{
+    cursor:pointer;
+}
+.buttons{
+    margin:1em;
+    display:flex;
+}
+.btn{
+    width:100px;
+    margin:0.5em;
+    border-radius:20px;
+    padding:0.3em;
+    color:white;
+    background-color:#48d0ff;
+    font-weight:bold;
+    border:2px solid white;
+    box-shadow: 0 0.2em 1em rgb(72, 208, 255);
+    cursor:pointer;
+    transition:all 0.1s ease;
+}
+.btn:hover{
+    transform:scale(1.05);
+    color:#194a5b;
+}
+.timer{
+    grid-row-start:2;
+    grid-column-start:3;
+    height:120px;
+    width:120px;
+    background: #48d0ff;
+    border-radius:50%;
+    display:grid;
+    animation: animate 1s linear infinite;
+}
+.time{
+    margin:auto;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-size:1.4em;
+    color: white;
+}
+@media only screen and (max-width:768px){
+    .timer{
+        margin:2em;
+        grid-row-start:1;
+        grid-column-start:3;
+    }
+    .questionarea{
+        grid-row-start:2;
+        grid-column-start:2;
+        grid-column-end:4;
+        padding:1em;
+    }
+    .buttons{
+        display:grid;
+    }
+}
+@keyframes animate{
+    0%{
+        box-shadow:0 0 0 #0fd0ff;
+    }
+    100%{
+        box-shadow:0 0 5em #0fd0ff;
+    }
+}
+@keyframes animate2{
+    0%{
+        text-shadow:0 0 0 #ff530f;
+        box-shadow:0 0 0 #ff530f;
+    }
+    100%{
+        text-shadow:0 0 5em #ff530f;
+        box-shadow:0 0 5em #ff530f;
+    }
+}
