@@ -25,7 +25,7 @@ $(document).ready(function(){
             
         }
         $("#new-table").keyup(function(){
-            a=$(this).val().toLowerCase();
+            a = $(this).val().toLowerCase();
             $(".subject-link").each(function(){
                 str=$(this).find("a").html().split(" ")[0];
                 if(a===str){
@@ -33,16 +33,18 @@ $(document).ready(function(){
                     $("#new-table").after("<span id='errormsg'>Test name already exists!</span>");
                     return false;
                 }
+                else if(a.length == 0)
+                {
+                    $("#new-table").after("<span id='errormsg'>Test name can't be blank!</span>");
+                    return false;
+                }
+                
                 $("#errormsg").remove();
             });
         });
         $("#add-test").click(function(){
             y=$("#new-table").val();
-            /*$.ajax({url:"createTest",
-                success : function(xhr){
-                    alert("successful");
-                    }
-            });*/
+
             $.get("createTest",{"new":y},function(){
                 $(".subject-link:last-child").before("<div class='subject-link'>\n\
                 <a href='questions.jsp?qdb="+y+"'>"+y+" Questions</a></div>");

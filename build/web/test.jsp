@@ -23,12 +23,10 @@
             String qtable=session.getAttribute("qtable").toString();
             String time=session.getAttribute("time").toString();
             int qno=Integer.parseInt(session.getAttribute("qno").toString());
+            
             //MySQL driver connectivity
             Class.forName("com.mysql.jdbc.Driver");
             Connection con=DriverManager.getConnection("jdbc:mysql://localhost/onlineexam","root","suvodip");
-            //Oracle driver connectivity
-            /*Class.forName("oracle.jdbc.driver.OracleDriver");   
-            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","user","password");*/
             Statement stmt=con.createStatement();
         %>
         
